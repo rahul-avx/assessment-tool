@@ -26,7 +26,7 @@ runs:
       run: |
         chmod +x ./test-tool-repo/PQC_CICD/PQC_Assessment_CICD 
         ./test-tool-repo/PQC_CICD/PQC_Assessment_CICD --inputFolder ./target-repo --outputFolder ./output-folder
-        
+      shell: bash  
     - name: Upload Output as Artifact
       uses: actions/upload-artifact@v3
       with:
