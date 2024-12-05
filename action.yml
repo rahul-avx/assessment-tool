@@ -21,6 +21,18 @@ runs:
       with:
         repository: rahul-m21/Test_Tool
         path: test-tool-repo
+        
+    - name: Prepare Output Directory
+      run: |
+        # Ensure the output directory exists
+        mkdir -p ./output-folder
+        
+        # Set read, write, and execute permissions for the directory
+        chmod 755 ./output-folder
+        
+        # Verify the permissions and directory creation
+        ls -ld ./output-folder
+      shell: bash
 
     - name: Run PyInstaller Executable
       run: |
