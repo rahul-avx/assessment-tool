@@ -21,7 +21,7 @@ runs:
       with:
         repository: rahul-m21/Test_Tool
         path: test-tool-repo
-        
+
     - name: Validate Input Folder
       run: |
         echo "Checking if input folder exists..."
@@ -47,7 +47,7 @@ runs:
     - name: Run PyInstaller Executable
       run: |
         chmod +x ./test-tool-repo/PQC_CICD/PQC_Assessment_CICD 
-        ./test-tool-repo/PQC_CICD/PQC_Assessment_CICD --inputFolder ./target-repo --outputFolder ./output-folder
+        ./test-tool-repo/PQC_CICD/PQC_Assessment_CICD --inputFolder ./target-repo --outputFolder ./output-folder --database ./test-tool-repo/PQC_CICD/.database/encrypted_data.bin
       shell: bash  
     - name: Upload Output as Artifact
       uses: actions/upload-artifact@v3
