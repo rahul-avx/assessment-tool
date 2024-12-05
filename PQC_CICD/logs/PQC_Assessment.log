@@ -1,0 +1,26 @@
+2024-12-04 15:51:49 - INFO - Java Code Scanning Started
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Crypto-test for Java Code Scanning
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Crypto-test/TestCryptography.java in /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Crypto-test
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/KeyGen for Java Code Scanning
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/KeyGen/LMSTest.java in /home/rahul.m/PQC_Assessment/input-folders/code-scanning/KeyGen
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Encrypt for Java Code Scanning
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Encrypt/PrivateKey.java in /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Encrypt
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Encrypt/SampleClass.java in /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Encrypt
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Encrypt/pqc_and_non_pqc_code.java in /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Encrypt
+2024-12-04 15:51:49 - INFO - Total Java files scanned : 5,
+ Total PQC supported classes in Java : 29, 
+ Total Non PQC classes : 22 
+2024-12-04 15:51:49 - INFO - Java Code Scanning completed
+2024-12-04 15:51:49 - INFO - Python Code Scanning Started
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Crypto-test for Python files
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Crypto-test/dilithium_test.py in /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Crypto-test
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/KeyGen for Python files
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/KeyGen/rsa_keygen.py in /home/rahul.m/PQC_Assessment/input-folders/code-scanning/KeyGen
+2024-12-04 15:51:49 - INFO - Scanning /home/rahul.m/PQC_Assessment/input-folders/code-scanning/Encrypt for Python files
+2024-12-04 15:51:49 - INFO - Total Python files scanned :2, 
+ Total PQC supported classes in Python files : 3,
+ Total Non PQC classes in Python files : 5
+2024-12-04 15:51:49 - INFO - Python Code Scanning completed.
+2024-12-04 15:51:49 - INFO - Code Scanning PQC Score  : 54.23728813559322
+2024-12-04 15:51:49 - INFO - Total files scanned for Code Scanning : 7
+2024-12-04 15:51:49 - INFO - Code Scanning completed.
