@@ -1,0 +1,34 @@
+name: PyInstaller Runner Action
+description: Runs the pyinstaller executable on a target repository
+inputs:
+  target-repo-url:
+    description: The URL of the Git repository to analyze
+    required: true
+outputs:
+  result:
+    description: Output of the pyinstaller executable
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout Target Repository
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ inputs.target-repo-url }}
+        path: target-repo
+
+    - name: Checkout Test_Tool Repository
+      uses: actions/checkout@v3
+      with:
+        repository: rahul-m21/Test_Tool
+        path: test-tool-repo
+
+    - name: Run PyInstaller Executable
+      run: |
+        chmod +x ./test-tool-repo/PQC_CICD/PQC_Assessment_CICD 
+        ./test-tool-repo/PQC_CICD/PQC_Assessment_CICD --inputFolder ./target-repo --outputFolder ./output-folder
+        
+    - name: Upload Output as Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: pyinstaller-output
+        path: ./output-folder
