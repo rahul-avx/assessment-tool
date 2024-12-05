@@ -22,16 +22,26 @@ runs:
         repository: rahul-m21/Test_Tool
         path: test-tool-repo
         
-    - name: Prepare Output Directory
+    - name: Validate Input Folder
       run: |
-        # Ensure the output directory exists
+        echo "Checking if input folder exists..."
+        if [ -d "./target-repo" ]; then
+          echo "Input folder exists. Listing contents:"
+          ls -la ./target-repo
+        else
+          echo "Input folder does not exist!"
+          exit 1
+        fi
+      shell: bash
+
+    # Step 3: Prepare Output Folder
+    - name: Prepare Output Folder
+      run: |
+        echo "Ensuring output folder exists..."
         mkdir -p ./output-folder
-        
-        # Set read, write, and execute permissions for the directory
         chmod 755 ./output-folder
-        
-        # Verify the permissions and directory creation
-        ls -ld ./output-folder
+        echo "Output folder ready. Listing contents (if any):"
+        ls -la ./output-folder || echo "Output folder is empty."
       shell: bash
 
     - name: Run PyInstaller Executable
