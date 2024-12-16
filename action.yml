@@ -59,4 +59,4 @@ runs:
     - name: Upload SARIF Results
       uses: github/codeql-action/upload-sarif@v2
       with:
-        sarif_file: ./output-folder/results.sarif
+        sarif_file: ./output-folder/codescan_results.sarif
