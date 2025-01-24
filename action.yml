@@ -4,6 +4,9 @@ inputs:
   target-repo-url:
     description: The URL of the Git repository to analyze
     required: true
+  token:
+    description: Personal Access Token (PAT) for accessing private repositories
+    required: true
 outputs:
   result:
     description: Output of the PQC_Assessment executable
@@ -14,13 +17,17 @@ runs:
       uses: actions/checkout@v3
       with:
         repository: ${{ inputs.target-repo-url }}
+        ref : PQC-V2
         path: target-repo
+        token: ${{ inputs.token }}  # Use PAT for authentication
 
     - name: Checkout Test_Tool Repository
       uses: actions/checkout@v3
       with:
         repository: rahul-m21/Test_Tool
+        ref : PQC-V2
         path: test-tool-repo
+        token: ${{ inputs.token }}  # Use PAT for authentication
 
     - name: Validate Input Folder
       run: |
